@@ -1,6 +1,8 @@
 .editorconfig
+.github/
 .idea/
 babel.config.json
 index.ts
+jest.config.js
 tsconfig.json
 *.tgz

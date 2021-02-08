@@ -42,7 +42,7 @@ export async function getParameterStoreValues<
         if (typeof valueKey === 'string') {
             values[valueKey as keyof I] = value.Value as any;
         } else {
-            const [key, casting] = Object.entries(valMapping as M)[0];
+            const [key, casting] = Object.entries(valueKey as M)[0];
             values[key as keyof I] = casting(value.Value);
         }
     });

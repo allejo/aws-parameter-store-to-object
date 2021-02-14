@@ -5,7 +5,7 @@ In the spirit of the dependency hell that is the JavaScript world, here is a sim
 ## Installation
 
 ```bash
-npm add @allejo/aws-parameter-store-to-object
+npm install @allejo/aws-parameter-store-to-object
 # or
 yarn add @allejo/aws-parameter-store-to-object
 ```

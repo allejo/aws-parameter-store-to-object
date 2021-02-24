@@ -1,6 +1,6 @@
 {
   "name": "@allejo/aws-parameter-store-to-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small utility function to fetch values from AWS Parameter Store as a JS object",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

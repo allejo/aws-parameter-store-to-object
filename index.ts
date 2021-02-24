@@ -10,7 +10,7 @@ type ExactlyOneKey<K extends keyof any, V, KK extends keyof any = K> =
 export interface Options {
     prefix?: string;
     ssm?: SSM;
-    ssmConfig?: {};
+    ssmConfig?: SSM.ClientConfiguration;
     withDecryption?: boolean;
 }
 

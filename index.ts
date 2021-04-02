@@ -29,7 +29,7 @@ export async function getParameterStoreValues<
     };
     const ssm = options.ssm ?? new SSM(options.ssmConfig);
     const { Parameters } = await ssm.getParameters(psParameters).promise();
-    const values: Partial<I> = {};
+    const values: Partial<I> = Object.create(null);
 
     Parameters?.forEach((value: SSM.Parameter) => {
         if (!value.Name) {

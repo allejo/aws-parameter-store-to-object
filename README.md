@@ -39,3 +39,23 @@ const variables = await getParameterStoreValues<Settings>(
 // variables.installID
 // etc.
 ```
+
+### Value Mapping
+
+Give you have a Parameter Store key in the format of `/application/app_id`, then you will set the key of the object to the 'app_id' (this is coming from Parameter Store) and the value to 'appID' (this is the value in the object being created, i.e. `Settings`).
+
+```javascript
+{
+    app_id: 'appID'
+}
+```
+
+By default, everything from Parameter Store will be coming in as a string. In the situation where you'd like to convert the string to an integer, you give it an object with the key of the `Settings` object, and a callback that converts a nullable string to whatever data type the field is.
+
+For example, if we need to convert the `app_id` Parameter Store value from a string to an integer and assign it to the `appID` field of a `Settings` object.
+
+```typescript
+{
+    app_id: { appID: (val?: string) => val ? Number.parseInt(val) : 0 }
+}
+```
